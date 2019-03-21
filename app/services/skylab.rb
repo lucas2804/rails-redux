@@ -5,7 +5,7 @@ class Skylab
   def self.bubble_sort(arr)
     sorted_arr = arr
     for i in (0..sorted_arr.size - 2)
-      for j in((i+1)..sorted_arr.size - 1)
+      for j in ((i + 1)..sorted_arr.size - 1)
         swap_position(sorted_arr, i, j)
       end
     end
@@ -24,6 +24,35 @@ class Skylab
     reverse_arr
   end
 
+  #
+  # 2. /question2/answer :
+  #   Given 2 integer arrays, find the common elements between 2 arrays
+  # array_1 = [3, 4, 6, 3, 7, 8, 5, 9]
+  # array_2 = [5, 4, 1, 2, 3]
+
+  def self.find_common_elements(array_1, array_2)
+    i, j = 0, 0
+    n1, n2 = array_1.size, array_2.size
+    array_1 = bubble_sort(array_1)
+    array_2 = bubble_sort(array_2)
+
+    results = []
+    binding.pry
+    while i < n1 and j < n2
+      puts array_1[i], array_2[j]
+      if array_1[i] == array_2[j]
+        results << array_2[j]
+        i = i + 1
+        j = j + 1
+      elsif array_1[i] < array_2[j]
+        i = i + 1
+      else
+        j = j + 1
+      end
+    end
+
+    results
+  end
 
   private
 
