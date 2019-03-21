@@ -54,6 +54,21 @@ class Skylab
     results
   end
 
+  # 3. /question3/answer :
+  #  Find the first non-repeated character in a String “abcdabcdabcdabcdeabcdcba”
+  #  string = 'abcdabcdabcdabcdeabcdcbae'
+  #  find_first_non_repeated_char('abcdabcdabcdabcdeabcdcbae')
+  def self.find_first_non_repeated_char(string)
+    hash = count_group_by_char(string)
+    string.chars.each_with_index do |char, index|
+      if hash[char] == 1
+        return {char: char, index: index, message: 'success'}
+      end
+    end
+
+    {char: '', index: -1, message: 'can not find_first_non_repeated_char'}
+  end
+
   private
 
   def self.swap_position(arr, i, j)
@@ -62,5 +77,18 @@ class Skylab
       arr[j] = arr[i]
       arr[i] = temp
     end
+  end
+
+  def self.count_group_by_char(string)
+    hash = {}
+    string.chars.each do |char|
+      if hash[char]
+        hash[char] = hash[char] + 1
+      else
+        hash[char] = 1
+      end
+    end
+
+    hash
   end
 end
