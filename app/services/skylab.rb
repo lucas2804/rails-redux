@@ -13,8 +13,7 @@ class Skylab
     sorted_arr
   end
 
-  def self.reverse_bubble_sort(arr)
-    arr = bubble_sort(arr)
+  def self.reverse_array(arr)
     reverse_arr = []
     i = arr.size - 1
     while i >= 0
@@ -37,7 +36,6 @@ class Skylab
     array_2 = bubble_sort(array_2)
 
     results = []
-    binding.pry
     while i < n1 and j < n2
       puts array_1[i], array_2[j]
       if array_1[i] == array_2[j]
@@ -62,21 +60,52 @@ class Skylab
     hash = count_group_by_char(string)
     string.chars.each_with_index do |char, index|
       if hash[char] == 1
-        return {char: char, index: index, message: 'success'}
+        return { char: char, index: index, message: 'success' }
       end
     end
 
-    {char: '', index: -1, message: 'can not find_first_non_repeated_char'}
+    { char: '', index: -1, message: 'can not find_first_non_repeated_char' }
   end
+
+  # 4. /question4/answer :
+  # Count the number of the character in a String after that Sort the character by the number from highest to lowest and lowest to highestEx:
+  # Input: zyabcdabcac
+  # Output 1: {a: 3, c: 3, b: 2, d: 1, y : 1, z: 1}
+  # Output 2: {z: 1, y : 1, d: 1, b : 2, c: 3, a: 3}
+
+  def self.sort_count_hash(string)
+    hash = count_group_by_char(string) #  {"z"=>1, "y"=>1, "a"=>3, "b"=>2, "c"=>3, "d"=>1}
+    hash_keys = hash.keys
+    for i in (0..hash_keys.size - 2)
+      for j in ((i + 1)..hash_keys.size - 1)
+        if hash[hash_keys[i]] > hash[hash_keys[j]]
+          swap_position(hash_keys, i, j)
+        end
+      end
+    end
+
+    hash_keys
+    low_high_hash = {}
+    hash_keys.each do |key|
+      low_high_hash[key] = hash[key]
+    end
+
+    hash_keys = Skylab.reverse_array(hash_keys)
+    high_low_hash = {}
+    hash_keys.each do |key|
+      high_low_hash[key] = hash[key]
+    end
+
+    [high_low_hash, low_high_hash]
+  end
+
 
   private
 
   def self.swap_position(arr, i, j)
-    if arr[i] > arr[j]
-      temp = arr[j]
-      arr[j] = arr[i]
-      arr[i] = temp
-    end
+    temp = arr[j]
+    arr[j] = arr[i]
+    arr[i] = temp
   end
 
   def self.count_group_by_char(string)
@@ -92,3 +121,4 @@ class Skylab
     hash
   end
 end
+Skylab.sort_count_hash('zyabcdabcac')
