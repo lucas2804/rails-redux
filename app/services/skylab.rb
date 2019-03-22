@@ -6,7 +6,9 @@ class Skylab
     sorted_arr = arr
     for i in (0..sorted_arr.size - 2)
       for j in ((i + 1)..sorted_arr.size - 1)
-        swap_position(sorted_arr, i, j)
+        if sorted_arr[i].to_i > sorted_arr[j].to_i
+          swap_position(sorted_arr, i, j)
+        end
       end
     end
 

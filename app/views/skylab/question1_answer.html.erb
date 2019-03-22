@@ -1,0 +1,22 @@
+<h4>
+	1. /question1/answer :
+	Implement bubble sort (highest to lowest and lowest to highest) in Ruby for array [9,1,8,2,7,3,6,4,5,10,13]
+</h4>
+<%= form_tag(action: 'bubble_sort') do |f| %>
+	<div class="form-group">
+		<label for="input_string">Input string:</label>
+		<input type="text" class="form-control" id="input_string" placeholder="Enter Input as 9,1,8,2,7,3,6,4,5,10,13" name="inputs[input_string]">
+	</div>
+	
+	<button type="submit" class="btn btn-default">Submit to sort from low to high</button>
+<% end %>
+
+
+<%= form_tag(action: 'bubble_sort_reverse') do |f| %>
+	<div class="form-group">
+		<label for="input_string">Input string:</label>
+		<input type="text" class="form-control" id="input_string" placeholder="Enter Input as 9,1,8,2,7,3,6,4,5,10,13" name="inputs[input_string]">
+	</div>
+	
+	<button type="submit" class="btn btn-default">Submit to sort from high to low</button>
+<% end %>
