@@ -26,7 +26,9 @@ class SkylabController < ApplicationController
   end
 
   def skylab_logger
-    SkylabLogger.new.error(input_params[:input_string01])
+    message = input_params[:input_string01]
+    SkylabLogger.new.error(message)
+    redirect_to '/question5/answer', notice: "This message #{message} was logged in heroku console, log/#{Rails.env}_skylab.log, email to owner luc@tinypulse.com"
   end
 
   private
