@@ -4,7 +4,7 @@ class SkylabController < ApplicationController
   end
 
   def bubble_sort
-    result = Skylab.bubble_sort(input_arr)
+    result = Skylab.bubble_sort(input_arr01)
     redirect_to '/question1/answer', notice: "Sorted array is: #{result}"
   end
 
