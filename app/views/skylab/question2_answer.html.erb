@@ -1,0 +1,15 @@
+<h4>
+	2. /question2/answer : <br />
+	Given 2 integer arrays, find the common elements between 2 arrays <br />
+	array_1 = [3,4,6,3,7,8,5,9] <br />
+	array_2 = [5,4,1,2,3] <br />
+</h4>
+<%= form_tag(action: 'find_common_elements') do |f| %>
+	<div class="form-group">
+		<label for="input_string">Input string:</label>
+		<input type="text" class="form-control" id="input_string" placeholder="Enter Input as 3,4,6,3,7,8,5,9" name="inputs[input_string01]">
+		<input type="text" class="form-control" id="input_string" placeholder="Enter Input as 5,4,1,2,3" name="inputs[input_string02]">
+	</div>
+	
+	<button type="submit" class="btn btn-default">Submit</button>
+<% end %>

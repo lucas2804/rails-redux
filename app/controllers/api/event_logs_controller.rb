@@ -1,4 +1,4 @@
-class Api::V1::EventLogsController < ActionController::Base
+class Api::EventLogsController < ActionController::Base
   skip_before_action :verify_authenticity_token
 
   # GET /event_logs
@@ -11,20 +11,14 @@ class Api::V1::EventLogsController < ActionController::Base
   # POST /event_logs
   # POST /event_logs.json
   def create
-    @event_log = EventLog.new(event_log_params)
-
-    if @event_log.save
-      render json: @event_log, status: :created
-    else
-      render json: @event_log.errors, status: :unprocessable_entity
-    end
+    CreateEventLogWorker.perform_async(event_name)
+    render json: { message: "Logging #{event_name} in sidekiq" }, status: :created
   end
-
 
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def event_log_params
-    params.require(:event_log).permit(:name)
+  def event_name
+    params.require(:event_name)
   end
 end

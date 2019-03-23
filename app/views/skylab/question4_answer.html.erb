@@ -1,0 +1,15 @@
+<h4>
+	4. /question4/answer : <br />
+	Count the number of the character in a String after that Sort the character by the number from highest to lowest and lowest to highestEx:  <br />
+	Input: zyabcdabcac  <br />
+	Output 1: {a: 3, c: 3, b: 2, d: 1, y : 1, z: 1}  <br />
+	Output 2: {z: 1, y : 1, d: 1, b : 2, c: 3, a: 3}  <br />
+</h4>
+<%= form_tag(action: 'sort_count_hash') do |f| %>
+	<div class="form-group">
+		<label for="input_string">Input string:</label>
+		<input type="text" class="form-control" id="input_string" placeholder="Enter Input as zyabcdabcac" name="inputs[input_string01]">
+	</div>
+	
+	<button type="submit" class="btn btn-default">Submit</button>
+<% end %>
