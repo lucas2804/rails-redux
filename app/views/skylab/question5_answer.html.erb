@@ -1,0 +1,14 @@
+<h4>
+	6. /question5/answer : <br />
+	Create logger class support multiple output such as a console, file ( in log/ folder ), mail.
+	
+	output as console, log/development_skylab.log, mail to `luc@tinypulse.com`
+</h4>
+<%= form_tag(action: 'skylab_logger') do |f| %>
+	<div class="form-group">
+		<label for="input_string">Error Message:</label>
+		<input type="text" class="form-control" id="input_string" placeholder="Enter Input as This is an fatal error" name="inputs[input_string01]">
+	</div>
+	
+	<button type="submit" class="btn btn-default">Submit</button>
+<% end %>

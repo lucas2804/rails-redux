@@ -1,8 +1,4 @@
 class SkylabController < ApplicationController
-  def question1_answer
-
-  end
-
   def bubble_sort
     result = Skylab.bubble_sort(input_arr01)
     redirect_to '/question1/answer', notice: "Sorted array is: #{result}"
@@ -27,6 +23,10 @@ class SkylabController < ApplicationController
   def sort_count_hash
     outputs = Skylab.sort_count_hash(input_params[:input_string01])
     redirect_to '/question4/answer', notice: "Outputs: #{outputs}"
+  end
+
+  def skylab_logger
+    SkylabLogger.new.error(input_params[:input_string01])
   end
 
   private
