@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1142px" height="260px" viewBox="0 0 1142 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 24</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Recognition_Dashboard-Empty-State" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-108.000000, -1262.000000)" opacity="0.1">
+        <g id="Group-24" transform="translate(109.000000, 1258.000000)">
+            <path d="M24.504294,72.5054795 L1116.26992,72.5054795" id="Line-4-Copy-14" stroke="#9B9B9B" stroke-linecap="round" stroke-dasharray="1,4"></path>
+            <path d="M24.504294,123.505479 L1116.26992,123.505479" id="Line-4-Copy-16" stroke="#9B9B9B" stroke-linecap="round" stroke-dasharray="1,4"></path>
+            <path d="M24.504294,173.505479 L1116.26992,173.505479" id="Line-4-Copy-23" stroke="#9B9B9B" stroke-linecap="round" stroke-dasharray="1,4"></path>
+            <text id="DATE-ASKED" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="14" font-weight="bold" fill="#4A4A4A">
+                <tspan x="27" y="14">DATE ASKED</tspan>
+            </text>
+            <text id="QUESTION" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="14" font-weight="bold" fill="#4A4A4A">
+                <tspan x="185" y="14">QUESTION</tspan>
+            </text>
+            <text id="Aug-9-2017" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="27" y="54">Aug 9 2017</tspan>
+            </text>
+            <text id="How-well-are-you-rec" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#5195FB">
+                <tspan x="185" y="54">How well are you recognized when you do great work?</tspan>
+            </text>
+            <text id="Jul-05-2017" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="27" y="101">Jul 05 2017</tspan>
+            </text>
+            <text id="Were-you-recognized" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#5195FB">
+                <tspan x="185" y="101">Were you recognized the last time you went the extra mile at work?</tspan>
+            </text>
+            <text id="Jun-07-2017" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="27" y="151">Jun 07 2017</tspan>
+            </text>
+            <text id="How-valued-do-you-fe" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#5195FB">
+                <tspan x="185" y="151">How valued do you feel at work?</tspan>
+            </text>
+            <text id="May-03-2017" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="27" y="203">May 03 2017</tspan>
+            </text>
+            <text id="SCORE" font-family="SourceSansPro-Bold, Source Sans Pro" font-size="14" font-weight="bold" fill="#4A4A4A">
+                <tspan x="976" y="14">SCORE</tspan>
+            </text>
+            <text id="7.6" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="976" y="54">7.6</tspan>
+            </text>
+            <text id="58%-Yes,-42%-No" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="976" y="101">58% Yes, 42% No</tspan>
+            </text>
+            <text id="7.3" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="976" y="151">7.3</tspan>
+            </text>
+            <text id="61%-Yes,-39%-No" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#4A4A4A">
+                <tspan x="976" y="203">61% Yes, 39% No</tspan>
+            </text>
+            <text id="Do-you-think-that-ou" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" line-spacing="20" fill="#5195FB">
+                <tspan x="185" y="203">Do you think that our organization does a good job of promoting recognition in the workplace?</tspan>
+            </text>
+            <g id="Group-26" transform="translate(47.000000, 247.000000)">
+                <text id="Last-30-days" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" fill="#4A4A4A">
+                    <tspan x="0" y="14">Last 30 days</tspan>
+                </text>
+                <polygon id="Triangle-Copy" fill="#9B9B9B" points="81 12 77 8 85 8"></polygon>
+            </g>
+            <g id="Group-27" transform="translate(972.000000, 244.000000)">
+                <text id="Recognition-TINYpuls" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="14" font-weight="normal" fill="#0F98F5">
+                    <tspan x="0" y="16">Recognition TINYpulses</tspan>
+                </text>
+                <g id="ic_keyboard_arrow_right" transform="translate(137.000000, 0.000000)">
+                    <g id="Icon-24px">
+                        <polygon id="Shape" fill="#0F98F5" points="8.59 16.34 13.17 11.75 8.59 7.16 10 5.75 16 11.75 10 17.75"></polygon>
+                        <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                    </g>
+                </g>
+            </g>
+            <path d="M-6.17995238e-17,236 L1140,236" id="Line-3" stroke="#F1F1F1" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
