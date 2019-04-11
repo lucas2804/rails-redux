@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  resources :courses
   namespace :api do
     resources :event_logs, only: [:index, :create]
+    resources :courses
   end
-  root 'skylab#question1_answer'
+  root 'courses#index'
 
   get 'question1/answer', to: 'skylab#question1_answer'
   get 'question2/answer', to: 'skylab#question2_answer'
