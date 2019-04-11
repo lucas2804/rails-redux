@@ -1,7 +1,7 @@
 class Api::CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
 
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   # GET /courses
   # GET /courses.json
