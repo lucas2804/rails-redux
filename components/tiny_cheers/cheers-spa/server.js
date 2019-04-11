@@ -30,7 +30,7 @@ app.use(express.static(path.resolve(__dirname, '/public/')));
 /**
  * Foward the API requests to backend
  */
-app.all('/recognition/api/1.0/*', (req, res) => {
+app.all('/api/*', (req, res) => {
   const cookie = req.headers.cookie;
   const options = {
     url: BACKEND_HOST + req.url,
@@ -63,7 +63,7 @@ app.get('*', (req, res) => {
     <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>TINYpulse | Recognition</title>
+      <title>Plural Sight | Courses</title>
       <meta name="description" content="Recognition">
       <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
       <!--<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->

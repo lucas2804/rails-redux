@@ -12,15 +12,15 @@ const csrf = function(cookie, backend) {
     if (CSRF_TOKENS[cookie]) {
       return resolve(CSRF_TOKENS[cookie]);
     }
-
+    
     const options = {
-      url: backend + 'recognition/dashboard',
+      url: backend + 'courses',
       method: 'GET',
       headers: {
         cookie: cookie,
       },
     };
-
+    
     request(options, (err, response, body) => {
       const $ = cheerio.load(body);
       resolve($('[name="csrf-token"]').attr('content'));

@@ -1,39 +1,43 @@
 /* eslint-disable global-require */
-import 'babel-polyfill';
-import React from 'react';
-import { render } from 'react-dom';
-import { browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { AppContainer } from 'react-hot-loader';
+import 'babel-polyfill'
+import React from 'react'
+import { render } from 'react-dom'
+import { browserHistory } from 'react-router'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { syncHistoryWithStore } from 'react-router-redux'
+import { Provider as ReduxProvider } from 'react-redux'
+import 'vendor'
+import 'app-styles/main'
 
-import 'vendor';
-import 'app-styles/main';
+import configureStore from './store/configureStore'
+import App from './components/App'
+import { initialize } from './utils/initializer'
 
-import configureStore from './store/configureStore';
-import Root from './components/Root';
-import { initialize } from './utils/initializer';
-
-const store = configureStore();
-const history = syncHistoryWithStore(browserHistory, store);
+const store = configureStore()
+// const history = syncHistoryWithStore(browserHistory, store)
 
 // Do some global configuration before starting
-initialize();
+initialize()
 
 render(
-  <AppContainer>
-    <Root store={store} history={history} />
-  </AppContainer>,
+  <ReduxProvider store={store}>
+    <Router>
+      <App/>
+    </Router>
+  </ReduxProvider>,
   document.getElementById('cheers-container'),
-);
+)
 
 if (module.hot) {
-  module.hot.accept('./components/Root', () => {
-    const NewRoot = require('./components/Root').default;
+  module.hot.accept('./components/App', () => {
+    const NewApp = require('./components/App').default
     render(
-      <AppContainer>
-        <NewRoot store={store} history={history} />
-      </AppContainer>,
+      <ReduxProvider store={store}>
+        <Router>
+          <NewApp/>
+        </Router>
+      </ReduxProvider>,
       document.getElementById('cheers-container'),
-    );
-  });
+    )
+  })
 }

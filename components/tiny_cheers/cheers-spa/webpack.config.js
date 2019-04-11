@@ -25,6 +25,7 @@ module.exports = {
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': "'development'",
+      "process.env.API_URL": JSON.stringify("http://app.lvh.me:3001"),
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
