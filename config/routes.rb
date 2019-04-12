@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :event_logs, only: [:index, :create]
     resources :courses, only: [:index]
+    resources :authors, only: [:index]
   end
 
   get 'question1/answer', to: 'skylab#question1_answer'
