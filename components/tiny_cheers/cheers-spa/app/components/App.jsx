@@ -8,6 +8,7 @@ import Header from "./common/Header";
 import NotFoundPage from "./common/NotFoundPage";
 
 function App() {
+  console.log('render  App')
   return (
     <div className="container-fluid">
       <Header />

@@ -7,6 +7,12 @@ import { connect } from 'react-redux'
 import { changeFormInputs } from '../../actions/manageCourseAction'
 
 class CourseForm extends React.Component {
+  constructor (props) {
+    super(props)
+    const { course } = props
+    this.state = { course: course } // <=> because this.state = 'undefined'
+  }
+  
   handleSaveCourse = (event) => {
     event.preventDefault()
     alert('async save course')
@@ -14,17 +20,18 @@ class CourseForm extends React.Component {
   
   handleChangeInputs = (event) => {
     const { name, value } = event.target
-    let { course, changeFormInputs } = this.props
-    
-    course[name] = value
-    changeFormInputs(course)
+    const { course } = this.state
+    this.setState({ course: { ...course, [name]: value } })
   }
   
   render () {
-    const { course, authors } = this.props
+    const { authors } = this.props
+    const { course } = this.state
     let saving = false
-    let errors = { title: 'Error', onSave: 'onSave', category: 'category'}
+    let errors = { title: 'Error', onSave: 'onSave', category: 'category' }
+    console.log('render Course Form')
     return (
+      (authors.length > 0) &&
       <form onSubmit={this.handleSaveCourse}>
         <h2>{course.id ? 'Edit' : 'Add'} Course</h2>
         {errors.onSave && (
@@ -59,7 +66,7 @@ class CourseForm extends React.Component {
 CourseForm.propTypes = {
   // state
   authors: PropTypes.array.isRequired,
-  course: PropTypes.object,
+  course: PropTypes.object.isRequired,
   
   // actions
   changeFormInputs: PropTypes.func.isRequired,
