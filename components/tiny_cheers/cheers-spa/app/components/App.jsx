@@ -6,7 +6,6 @@ import CoursesPage from "./courses/CoursesPage";
 import ManageCoursePage from "./courses/ManageCoursePage";
 import Header from "./common/Header";
 import NotFoundPage from "./common/NotFoundPage";
-// import CoursesPage from "./CoursesPage";
 
 function App() {
   return (
