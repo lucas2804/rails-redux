@@ -3,8 +3,7 @@ import initialState from './initialState'
 
 export default function manageCourseReducer (state = initialState.course, action) {
   switch (action.type) {
-    case actionTypes.CHANGE_FORM_INPUTS:
-      return Object.assign({}, state, action.course)
+    case actionTypes.CREATE_COURSE_SUCCESS:
     default:
       return state
   }

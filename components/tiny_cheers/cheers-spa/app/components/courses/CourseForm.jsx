@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TextInput from '../common/TextInput'
 import SelectInput from '../common/SelectInput'
-import { loadAuthors } from '../../actions/authorAction'
+import { loadAuthors } from '../../redux/actions/authorAction'
 import { connect } from 'react-redux'
-import { changeFormInputs } from '../../actions/manageCourseAction'
+import { changeFormInputs } from '../../redux/actions/manageCourseAction'
 
 class CourseForm extends React.Component {
   constructor (props) {

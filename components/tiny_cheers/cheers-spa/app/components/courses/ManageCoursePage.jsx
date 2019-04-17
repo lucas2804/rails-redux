@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { loadCourses } from './../../actions/courseAction'
-import { loadAuthors } from './../../actions/authorAction'
+import { loadCourses } from '../../redux/actions/courseAction'
+import { loadAuthors } from '../../redux/actions/authorAction'
 import PropTypes from 'prop-types'
 import CourseForm from './CourseForm'
 

@@ -1,5 +1,5 @@
 import * as types from './actionTypes'
-import * as authorApi from '../api/authorApi'
+import * as authorApi from '../../api/authorApi'
 
 // export function createCourse (course) {
 //   return { type: types.CREATE_AUTHOR, course: course }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {loadCourses} from './../../actions/courseAction'
-import {loadAuthors} from './../../actions/authorAction'
+import {loadCourses} from '../../redux/actions/courseAction'
+import {loadAuthors} from '../../redux/actions/authorAction'
 import CourseList from './CoursesList'
 import PropTypes from 'prop-types'
 
@@ -37,7 +37,7 @@ function addAuthorNamesToCourses(state) {
     let authorName = ''
     if (state.authors) {
       let matchedAuthor = state.authors.find(author => author.id === course.author_id)
-      if(matchedAuthor !== 'undefined'){
+      if(matchedAuthor !== undefined){
         authorName = matchedAuthor.name
       }
     }
