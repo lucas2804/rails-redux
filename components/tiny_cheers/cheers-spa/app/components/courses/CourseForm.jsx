@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import TextInput from '../common/TextInput'
 import SelectInput from '../common/SelectInput'
 import { loadAuthors } from '../../redux/actions/authorAction'
+import { createCourse } from '../../redux/actions/courseAction'
 import { connect } from 'react-redux'
 import { changeFormInputs } from '../../redux/actions/manageCourseAction'
 
@@ -15,7 +16,7 @@ class CourseForm extends React.Component {
   
   handleSaveCourse = (event) => {
     event.preventDefault()
-    alert('async save course')
+    this.props.createCourse(this.state.course)
   }
   
   handleChangeInputs = (event) => {
@@ -70,6 +71,7 @@ CourseForm.propTypes = {
   
   // actions
   changeFormInputs: PropTypes.func.isRequired,
+  createCourse: PropTypes.func.isRequired,
 }
 
 // This func determines what state is passed to our component via props
@@ -83,6 +85,7 @@ function mapStateToProps (state) {
 const mapDispatchToProps = {
   loadAuthors,
   changeFormInputs,
+  createCourse,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CourseForm)

@@ -1,8 +1,8 @@
 import * as types from './actionTypes'
 import * as courseApi from '../../api/courseApi'
 
-export function createCourse (course) {
-  return { type: types.CREATE_COURSE, course: course }
+export function createCourseSuccess (course) {
+  return { type: types.CREATE_COURSE_SUCCESS, course: course }
 }
 
 export function loadCourseSuccess (courses) {
@@ -15,6 +15,19 @@ export function loadCourses () {
       .getCourses()
       .then(courses => {
         dispatch(loadCourseSuccess(courses))
+      })
+      .catch(error => {
+        throw error
+      })
+  }
+}
+
+export function createCourse (course) {
+  return function (dispatch) {
+    return courseApi
+      .saveCourse(course)
+      .then(course => {
+        dispatch(createCourseSuccess(course))
       })
       .catch(error => {
         throw error

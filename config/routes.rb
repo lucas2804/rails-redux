@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :courses
   namespace :api do
     resources :event_logs, only: [:index, :create]
-    resources :courses, only: [:index]
+    resources :courses, only: [:index, :create, :update]
     resources :authors, only: [:index]
   end
 

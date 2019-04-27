@@ -1,5 +1,5 @@
 import { handleResponse, handleError } from "./apiUtils";
-const baseUrl = "http://app.lvh.me:3001/api/courses.json";
+const baseUrl = "http://app.lvh.me:3001/api/courses";
 
 export function getCourses() {
   return fetch(baseUrl)
