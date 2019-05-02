@@ -6,5 +6,5 @@ export default {
     title: "",
     authorId: null,
     category: ""
-  },
-}
+  }
+};

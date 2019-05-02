@@ -20,6 +20,7 @@ a:hover {
 :global {
   .ga-mask {
     position: relative;
+
     &:before {
       content: '';
       top: 0;

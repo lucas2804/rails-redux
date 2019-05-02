@@ -1,5 +1,10 @@
 {
   "name": "rails-redux",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "redux-starter-kit": "^0.5.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
+  }
 }
