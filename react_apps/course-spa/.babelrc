@@ -1,0 +1,20 @@
+{
+  "presets": ["react", "env", "stage-0"],
+  "plugins": [
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "vendor": "./cheers-spa/app/vendor",
+          "app-images": "./cheers-spa/app/images",
+          "app-fonts": "./cheers-spa/app/fonts",
+          "app-api": "./cheers-spa/app/api",
+          "app-utils": "./cheers-spa/app/utils",
+          "app-actions": "./cheers-spa/app/actions",
+          "app-selectors": "./cheers-spa/app/selectors"
+        }
+      }
+    ]
+  ]
+}

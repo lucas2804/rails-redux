@@ -1,0 +1,22 @@
+:global {
+  .text-decoration-none {
+    text-decoration: none;
+  }
+  .flex-none {
+    flex: none;
+  }
+  .min-h-40 {
+    min-height: 40%;
+  }
+  .min-w-0 {
+    min-width: 0;
+  }
+  .max-h690 {
+    max-height: 690px;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
