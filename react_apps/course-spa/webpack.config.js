@@ -38,6 +38,6 @@ module.exports = {
   },
   resolve: {
     alias: alias,
-    extensions: ['.js', '.jsx', '.scss'],
+    extensions: ['.js', '.jsx', '.scss', '.css'],
   },
 };

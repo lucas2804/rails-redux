@@ -40,7 +40,7 @@ const makeAssetsLoaders = ({ isDevelopment }) => [
 const makeStyleLoaders = ({ isDevelopment, isExtracting }) => [
   // Vendor loader
   {
-    test: /\.scss$/,
+    test: /\.scss|\.css$/,
     include: [/node_modules/, /app\/vendor/],
     use: [
       {
@@ -56,7 +56,7 @@ const makeStyleLoaders = ({ isDevelopment, isExtracting }) => [
   },
   // App styles loaders
   {
-    test: /\.scss$/,
+    test: /\.scss|\.css$/,
     exclude: [/node_modules/, /app\/vendor/],
     use: [
       {

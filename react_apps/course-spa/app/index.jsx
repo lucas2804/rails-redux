@@ -4,16 +4,11 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider as ReduxProvider } from "react-redux";
-import "app-styles/main";
+import configureStore from "./redux/store/configureStore";
 
-import configureStore from "./store/configureStore";
 import App from "./components/App";
-import { initialize } from "./utils/initializer";
 
 const store = configureStore();
-
-// Do some global configuration before starting
-initialize();
 
 render(
   <ReduxProvider store={store}>
